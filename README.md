@@ -3,20 +3,24 @@ A Example that shows how to build a Meta Search Engine like serax for Privacy us
 
 
 ## Usage
-will open a new window with the search result 
+with npx
 ```
+// Opens a New Window with the result
 npx @stealify/example-search-engine "your search"
+// Returns the result as HTML File (string)
+npx @stealify/example-search-engine --headless "your search"
 ```
 
 
-your_code.js
-```
+or programatical
+
+your_code.js that opens a window
+```js
 require('@stealify/example-search-engine')('your search'); // opens again a new window
 ```
 
-
-your_express_app
-```
+your_express_app that serves the result
+```js
 const app = require('express')()
 app.use((req)=> {
   req.res.end(require('@stealify/example-search-engine')('your search', { headless: true })) // returns the result as html string
