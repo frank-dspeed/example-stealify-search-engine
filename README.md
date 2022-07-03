@@ -10,6 +10,8 @@ npx @stealify/example-search-engine "your search"
 // Returns the result as HTML File (string)
 npx @stealify/example-search-engine --headless "your search"
 ```
+the above examples do work from command lines so this is ideal foundation for a chrome-extension use it combined with nativeMessaging
+
 
 
 or programatical
@@ -27,3 +29,7 @@ app.use((req)=> {
 })
 app.listen(8080)
 ```
+
+
+## TODO
+I want to add a example chrome extension that uses the stealify-extension host via webrtc 
